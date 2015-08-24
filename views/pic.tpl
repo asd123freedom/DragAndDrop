@@ -49,6 +49,6 @@
     {include file="./common/script.tpl"}
     <script src="{$base_url}/pic.js"></script>
     <script src="{$base_url}/right.js"></script>
-    <!-- script src="{$base_url}/rightToLeft.js"></scrip-->
+    <script src="{$base_url}/rightToLeft.js"></script>
 </body>
 </html>

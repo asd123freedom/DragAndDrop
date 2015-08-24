@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2015-08-20 09:51:00
+<?php /* Smarty version Smarty-3.1.13, created on 2015-08-24 19:40:31
          compiled from "/Users/liuchaofan/projects/RIA/views/pic.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133889644455d47677db60d0-18947566%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a1ef45f7a970455cd31c4834c7645e65e426ee74' => 
     array (
       0 => '/Users/liuchaofan/projects/RIA/views/pic.tpl',
-      1 => 1439988388,
+      1 => 1440415857,
       2 => 'file',
     ),
   ),
@@ -49,8 +49,8 @@ $_smarty_tpl->tpl_vars['foo']->first = $_smarty_tpl->tpl_vars['foo']->iteration 
 /pic.js"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 /right.js"></script>
-    <!-- script src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-/rightToLeft.js"></scrip-->
+    <script src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+/rightToLeft.js"></script>
 </body>
 </html>
 <?php }} ?>

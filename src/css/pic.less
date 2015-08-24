@@ -12,7 +12,11 @@ body {
 
 #small {
     display: none;
+    border: 1px dotted #ddd;
+    background-color: #ccc;
     position: fixed;
+    width: 20px;
+    height: 20px;
 }
 
 #box {
@@ -47,18 +51,21 @@ ul {
     cursor: move;
     position: relative;
     &:last-child {
-      margin-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    &.active {
+        background-color: #2d4e7c;
     }
     &:hover {
-      background-color: #2d4e7c;
-      &:before {
+        background-color: #2d4e7c;
+        &:before {
           content: '';
           width: 5px;
           background-color: #f78755;
           position: absolute;
           height: 100%;
           left: 0;
-      }
+        }
     }
 }
 

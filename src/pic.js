@@ -76,7 +76,7 @@ $(document).ready(function() {
             }
 
             if (dragBottom > noDrag) {
-                console.log(i + ':' + noDrag + '--' + dragBottom);
+                // console.log(i + ':' + noDrag + '--' + dragBottom);
                 // $("#place-holder").remove();
                 $(item[i]).after(holdPlace);
             }
