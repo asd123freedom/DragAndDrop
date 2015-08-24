@@ -1,0 +1,73 @@
+{
+    "status": 0,
+    "data": {
+        "page":1,
+        "pageSize":"6",
+        "listSize":1,
+        "list1":[],
+        "list": [
+
+            {
+                "hospital_id": "518",
+                "order_id": "304832",
+                "acode": "1378206389450938",
+
+                "patient_id": "1255",
+                "department": "",
+                "treat_time": "2013-09-04",
+                "order_time": "2013-09-03 19:06:36",
+
+                "status": "6",
+                "hospital_name": "\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662",
+                "premark": "adfad",
+
+                "interval": "1",
+                "website": "http:\/\/www.2333333.net",
+                "eva_status": -1,
+                "phone": "18610040599"
+            },
+            {
+                "hospital_id": "518",
+                "order_id": "304832",
+                "acode": "1378206389450938",
+
+                "patient_id": "1255",
+                "department": "",
+                "treat_time": "2013-09-04",
+                "order_time": "2013-09-03 19:06:36",
+
+                "status": "2",
+                "hospital_name": "\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662",
+                "premark": "adfad",
+
+                "interval": "1",
+                "website": "http:\/\/www.2333333.net",
+                "eva_status": -1,
+                "phone": "18610040599"
+
+
+            },
+            {
+                "hospital_id": "518",
+                "order_id": "304832",
+                "acode": "1378206389450938",
+
+                "patient_id": "1255",
+                "department": "",
+                "treat_time": "2013-09-04",
+                "order_time": "2013-09-03 19:06:36",
+
+                "status": "2",
+                "hospital_name": "\u5185\u8499\u53e4\u4e16\u7eaa\u7537\u79d1\u533b\u9662",
+                "premark": "adfad",
+
+                "interval": "1",
+                "website": "http:\/\/www.2333333.net",
+                "eva_status": -1,
+                "phone": "18610040599"
+
+
+            }
+        ]
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "extData": {
+        "aType": "1",
+        "fr": "1",
+        "mpqid": "1",
+        "psid": "1",
+        "qid": "1",
+        "sid": "1",
+        "subqid": "1",
+        "rsv": {
+            "aa": 123,
+            "bb":"rsv"
+        }
+    },
+    "hFormData": {
+        "aType": 4,
+        "action": "/juhe/index",
+        "key": "男科医院",
+        "provID": "1",
+        "provName": "北京",
+        "sessionID": "15542137698075542136",
+        "source": 5
+    },
+    "headerPath": "http://s1.bdstatic.com/r/www/cache/biz/ecom/onesite/20140509/site",
+    "hotSearchWords": [
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "word": "男科医院"
+        }
+    ],
+    "loginData": {
+        "ajax": {
+            "askDoctorSummary": "/mock/common/data/req/askdoctor.json"
+        },
+        "isLogin": true,
+        "link": {
+            "acctSet": "http://www.baidu.com",
+            "baozhang": "http://www.baidu.com",
+            "evaluate": "http://www.baidu.com",
+            "guahao": "http://www.baidu.com",
+            "zhixin": "http://zhixin.baidu.com/my/index?module=onesite",
+            "askDoctor": "askDoctor",
+            "askDoctorAsk": "askDoctorAsk"
+        },
+        "userName": "特别特别长的名字试试看呀"
+    },
+    "navList": [
+        {
+            "title": "首页",
+            "current": 1
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "医院"
+        },
+        {
+            "current": 1,
+            "link": "http://www.baidu.com",
+            "title": "病症",
+            "current": "1"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "医药馆"
+        },
+        {
+            "hot": 1,
+            "link": "http://www.baidu.com",
+            "title": "美容整形"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "保健养生"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "专题"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "名医讲堂"
+        },
+        {
+            "link": "http://www.baidu.com",
+            "title": "社区"
+        }
+    ],
+    "paramData": {
+        "qid": 123,
+        "ssid": 1,
+        "key": "health"
+    }
+}

@@ -1,0 +1,41 @@
+@import 'util.less';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: #03C;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+
+.float-right {
+    float: right;
+}
+
+input:focus {
+    outline: none;
+}
+
+body {
+    .font-body();
+    font-size: 12px;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1438741530_8413324.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1438741530_8413324.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1438741530_8413324.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1438741530_8413324.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1438741530_8413324.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
