@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>图片查看器</title>
+    <link rel="stylesheet/less" type="text/css" href="/css/pic.less" />
+    <script src="http://cdn.bootcss.com/less.js/2.5.1/less.min.js"></script>
+</head>
+
+<body class="">
+    <div id="box">
+        <ul id="list">
+            <li class="item">
+              <span class="text">c</span>
+            </li>
+            <li class="item">
+              <span class="text">css</span>
+            </li>
+            <li class="item">
+              <span class="text">es</span>
+            </li>
+            <li class="item">
+              <span class="text">go</span>
+            </li>
+            <li class="item">
+              <span class="text">java</span>
+            </li>
+            <li class="item">
+              <span class="text">js</span>
+            </li>
+            <li class="item">
+              <span class="text">php</span>
+            </li>
+            <li class="item">
+              <span class="text">Py</span>
+            </li>
+            <li class="item">
+              <span class="text">ruby</span>
+            </li>
+        </ul>
+    </div>
+    <div id="pic">
+            <div class="temp hide">
+                1
+            </div>
+    </div>
+    <div id="small"></div>
+
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
+    <script>
+        define('jquery', function (require) {
+            return $;
+        });
+        function render(data) {
+            $('#pic div:not(.temp)').remove();
+            var arr = data.data;
+            var $tmp = $('#pic div.temp')
+            for (var i = 0; i < arr.length; i++) {
+                var $div = $tmp.clone().removeClass('temp hide');
+                $div.text(arr[i].name);
+                $div.appendTo($('#pic'));
+            }
+        }
+        $(function () {
+            $('#list li').on('click', function () {
+                $(this).siblings().removeClass('current');
+                $(this).addClass('current');
+                var url = "data";
+                var data = {
+                    name: $(this).find('span').text()
+                }
+                $.ajax({
+                    type: 'get',
+                    url: url,
+                    data: data
+                }).done(function(data) {
+                    render(data);
+                });
+            });
+            $('#list li:eq(0)').trigger('click');
+        });
+    </script>
+    <script src="/js/pic.js"></script>
+    <script src="/js/right.js"></script>
+    <script src="/js/rightToLeft.js"></script>
+</body>
+</html>

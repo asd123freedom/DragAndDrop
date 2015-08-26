@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  // background-color: @midBlue;
+}
+.hide {
+    display: none!important;
+}
+
+#small {
+    display: none;
+    border: 1px dotted #ddd;
+    background-color: #ccc;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+}
+
+#box {
+    margin: 0 auto;
+    height: 100%;
+    width: 15em;
+    position: fixed;
+    left:0;
+    top: 0;
+    background-color: #2b4064;
+}
+ul {
+    padding: 0;
+    margin: auto;
+    margin-top: 200px;
+    width: 100%;
+    // border: 1px solid #fff;
+}
+.item, .drag-tab {
+    vertical-align: middle;
+}
+.item {
+    z-index: 1;
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    color: #ffd;
+    margin-bottom: 3px;
+    background-color: #2b446b;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    &.active {
+        background-color: #2d4e7c;
+    }
+    &.current {
+        background-color: #2d4e7c;
+        &:before {
+          content: '';
+          width: 5px;
+          background-color: #f78755;
+          position: absolute;
+          height: 100%;
+          left: 0;
+        }
+    }
+    &:hover {
+        background-color: #2d4e7c;
+        &:before {
+          content: '';
+          width: 5px;
+          background-color: #f78755;
+          position: absolute;
+          height: 100%;
+          left: 0;
+        }
+    }
+}
+
+#place-holder {
+    z-index: 0;
+    display: block;
+    background-color: #2b446b;
+    background: #2b446b;
+    list-style: none;
+    opacity: .7;
+    margin-bottom: 3px;
+}
+.draggable {
+    position: fixed;
+    z-index: 10;
+    // box-shadow: 0 0 .01em #2b446b;
+}
+.item .cite {
+    display: inline-block;
+    padding: 0;
+    color: black;
+    font-weight: bold;
+}
+#pic {
+    // max-width: 780px;
+    padding-top: 5px;
+    margin-left: 15em;
+    div {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        background-color: #666;
+        // margin-top: 5px;
+        margin-left: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 150px;
+        &.dragged {
+            opacity: .5;
+        }
+        &.draggable {
+            //opacity: .5;
+            position: fixed;
+            z-index: 10;
+        }
+        &.droppable {
+            border: 2px solid #f78755;
+            margin-left: 6px;
+            margin-bottom: 6px;
+            margin-top: 6px;
+        }
+    }
+}
