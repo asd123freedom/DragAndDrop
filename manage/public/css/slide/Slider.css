@@ -1,0 +1,80 @@
+/*slider css*/
+/*测量滚动条宽度 用于弹窗出现时禁止滚动*/
+.modal-measure-scrollbar{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+     top: -300px;
+     left: -300px;
+    overflow: scroll;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+.modal-measure-scrollbar .inner{
+    height: 200px;
+}
+
+
+#slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#slider-box .close,
+#slider-box .prev,
+#slider-box .next,
+#slider-box .slider-img-box {
+   position: fixed;
+   z-index: 1000;
+}
+#slider-box .close,
+#slider-box .prev,
+#slider-box .next {
+    background: url(slider-icon.png) no-repeat;
+}
+#slider-box .next,
+#slider-box .prev {
+    width: 52px;
+    height: 68px;
+    margin-top: -34px;
+    top: 50%;
+}
+
+#slider-box .close {
+    top: 10px;
+    right: 10px;
+    width: 52px;
+    height: 52px;
+    background-position: 0 0;
+}
+#slider-box .prev {
+    left: 10px;
+    background-position: 0 -72px;
+}
+#slider-box .next {
+    right: 10px;
+    background-position: 0 -160px;
+}
+#slider-box .slider-img-box {
+    top: 50%;
+    left: 50%;
+}
+.slider-img-box .slider-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+    margin-top: -9px;
+    background: url(preloader.gif) no-repeat;
+}
+.slider-img-box .description {
+    display: block;
+    text-align: right;
+    padding-top: 2px;
+    color: #fff;
+    font-size: 12px;
+}

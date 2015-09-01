@@ -22,7 +22,6 @@ $(document).ready(function() {
     my = mouse.clientY;
     x = mx - $(this).offset().left;
     y = my - $(this).offset().top;
-
     var width = $(this).width();
     var height = $(this).height();
     firstItem = $(".item:first").offset().top + ($(".item:first").height() / 2);

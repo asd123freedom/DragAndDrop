@@ -1,0 +1,12 @@
+[
+    {
+        "src": "http://www.atool.org/placeholder.png?size=240x800&text=广告广告广告&bg=9bce3b",
+        "bigPic": "http://www.atool.org/placeholder.png?size=740x601",
+        "desc": "广告描述 百度健康"
+    },
+    {
+        "src": "http://www.atool.org/placeholder.png?size=240x300&text=广告广告广告&bg=9bce3b",
+        "bigPic": "http://www.atool.org/placeholder.png?size=740x602",
+        "desc": "广告描述 百度健康"
+    }
+]

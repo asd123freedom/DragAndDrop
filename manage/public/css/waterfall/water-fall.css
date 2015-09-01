@@ -1,0 +1,33 @@
+/*css reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+.container {
+    margin: 10px auto;
+}
+.main {
+    position: relative;
+    width: 100%;
+}
+.main .brick {
+    padding: 5px;
+    float: left;
+    /*position: absolute;*/
+    border: 1px solid #ccc;
+}
+.brick .pic {
+    width: 240px;
+    text-align: center;
+}
+.brick a {
+    display: block;
+}

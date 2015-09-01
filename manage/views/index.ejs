@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="stylesheet" href='/css/upload-widget.css' />
+  </head>
+  <body>
+
+    <div id="main">
+    	<h1>demo</h1>
+
+        <div id="content" class="show">
+            <a id="trigger-btn" href="javascript:void(0)">上传图片</a>
+        </div>
+
+        <ul class="gallery">
+
+            <% if (pics.length) { %>
+
+                <% pics.forEach(function(pic){ %>
+                    <li class="gallery-item">
+                        <a>
+                            <img class="gallery-pic" src=<%= pic %> />
+                        </a>
+                    </li>
+                <% }) %>
+
+            <% } %>
+
+            <!-- <li class="gallery-item">
+                <a>
+                    <img class="gallery-pic" src="./upload/Desert.jpg" />
+                </a>
+            </li> -->
+
+            <ul class="content-menus">
+                <li class="to-edit">编辑</li>
+                <li class="to-edit">编辑</li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/upload-widget.js" type="text/javascript"></script>
+    <script src="/js/filter-widget.js" type="text/javascript"></script>
+    <script src="/js/crop-widget.js" type="text/javascript"></script>
+    <script src="/js/pic-edit-widget.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $('#trigger-btn').upload({
+            uploadUrl: '/upload'
+        });
+
+        $('.gallery-pic').mousedown(function(e){
+            var that = this;
+            var left = this.offsetLeft + 100+ 'px',
+                top = this.offsetTop + 100 + 'px';
+            if(3 == e.which) {
+                $('.content-menus').css({'left': left, 'top': top}).fadeIn();
+                $('.content-menus .to-edit').on('click', function(){
+                    $('body').picEdit({
+                        pic: $(that)
+                    });
+                });
+            }
+            return false;
+        })
+        $(document).on('contextmenu',function(){
+            return false;
+        });
+        $(document).click(function(){
+            $('.content-menus').fadeOut();
+            $('.content-menus .to-edit').off('click');
+        });
+
+    </script>
+  </body>
+</html>

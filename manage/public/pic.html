@@ -79,6 +79,11 @@
                 });
             });
             $('#list li:eq(0)').trigger('click');
+
+            $(document).on('contextmenu',function(){
+                return false;
+            });
+
         });
     </script>
     <script src="/js/pic.js"></script>

@@ -6,6 +6,11 @@ $(function () {
       my = mouse.clientY;
       x = mx - $(this).offset().left;
       y = my - $(this).offset().top;
+      console.log(mouse);
+      if (3 == mouse.which) {
+          alert('');
+          return false;
+      }
       $drag = $(this).clone();
       $drag.addClass('draggable');
       $drag.appendTo($('#pic'));

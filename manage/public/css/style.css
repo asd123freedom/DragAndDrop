@@ -1,0 +1,259 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.gallery-edit-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.gallery-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #2B4064;
+    box-shadow: 1px 1px 1px red
+}
+.toolbar-title {
+    display: block;
+    margin-top: -3px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: #2C3049;
+}
+.save-btn {
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #F78755;
+}
+.save-btn:hover {
+    background-color: #7BC69C;
+}
+.pre-step-btn {
+    display: block;
+    margin: 20px auto;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #2C4A75;
+
+}
+.pre-step-btn-act {
+    background: #F78755;
+}
+.gallery {
+    list-style-type: none;
+    width: auto;
+    float: left;
+    position: relative;
+}
+.gallery-item {
+    float: left;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+}
+.gallery-pic {
+    width: 200px;
+    height: 200px;
+
+}
+
+.cut-tool {
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #2A4674;
+    background-color: #2C4A75;
+}
+.cut-tool-panel {
+    width: 220px;
+    margin: 0 auto;
+}
+.cut-title {
+    color: #fff;
+    padding-left: 10px;
+    background-color: #2B4064;
+}
+.cut-input {
+    width: 50px;
+}
+.cut-btns{
+    margin-top: 10px;
+}
+.cut-btn {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 10px;
+    text-decoration: none;
+    background-color: #2C3049;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+}
+.pop-pic-widget {
+    position: fixed;
+    left: 270px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #4A7395;
+    opacity: 0.8;
+    z-index:  99;
+}
+.pop-container {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    bottom: 0;
+    right: 0;
+    background-color: #2C3049;
+    opacity: 1;
+    z-index:  999;
+}
+.pop-pic-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+.pop-pic {
+    position: absolute;
+}
+.pop-close-btn {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    z-index: 9999999
+}
+
+.cut-drag-point {
+    position:absolute; width:4px; height:4px; border:1px solid #000; background:white; overflow:hidden;
+}
+
+#zxxDragBg {
+    height:100%; background:white; opacity:0.3; filter:alpha(opacity=30); cursor:move;
+}
+
+.pic-resize {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: #F78755 ;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.pic-resize .title {
+    border-bottom: 1px dotted #F43712;
+    text-align: center;
+}
+.pic-resize .pic-size-val {
+    display: inline-block;
+    width:50px;
+}
+.pic-resize .pic-size-progress {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    border: 2px solid red;
+}
+.pic-size-progress .circle {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -5px;
+    left: 55px;
+    background-color: #fff;
+}
+.to-cut-btn {
+    cursor: pointer;
+}
+
+.resize-width, .resize-height{
+    width: 100px;
+    outline: none;
+    border: none;
+    height: 26px;
+    border-radius:  8px;
+    background-color: #2C3049;
+    color: #fff;
+    font: 15px;
+    text-align: center;
+}
+.resize-panel {
+    height: 110px;
+}
+.rotate-panel {
+    height: 80px;
+}
+.filter-panel a {
+    display: inline-block;
+    margin: 0 10px 5px;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius:  4px;
+    background-color: #2C3049;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.content-menus {
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 100px;
+    background-color: #2B4064;
+    z-index: 999;
+}
+.content-menus .to-edit {
+    list-style-type: none;
+    color: #fff;
+    height: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.content-menus .to-edit:hover {
+    background-color: #2C4A75
+}
