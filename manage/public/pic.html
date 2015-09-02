@@ -37,6 +37,9 @@
             <li class="item">
               <span class="text">ruby</span>
             </li>
+            <li class="item">
+              <span class="text">real</span>
+            </li>
         </ul>
     </div>
     <div id="pic">
@@ -54,11 +57,14 @@
         });
         function render(data) {
             $('#pic div:not(.temp)').remove();
-            var arr = data.data;
+            var arr = data;
             var $tmp = $('#pic div.temp')
             for (var i = 0; i < arr.length; i++) {
                 var $div = $tmp.clone().removeClass('temp hide');
-                $div.text(arr[i].name);
+                $div.text(arr[i].name || '');
+                $div.css({
+                    'background-image': 'url(' + arr[i].url + ')'
+                });
                 $div.appendTo($('#pic'));
             }
         }
@@ -81,7 +87,7 @@
             $('#list li:eq(0)').trigger('click');
 
             $(document).on('contextmenu',function(){
-                return false;
+                // return false;
             });
 
         });

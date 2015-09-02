@@ -7,7 +7,6 @@ var html = fs.readFileSync('./public/pic.html', {encoding: 'utf8'});
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var path = __dirname.slice(0, -7)+'/public/upload';
-    console.log(path);
     fs.readdir(path, function(err, files) {
         if (err) {
            console.log('read dir error');
