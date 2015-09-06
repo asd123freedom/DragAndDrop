@@ -44,19 +44,20 @@ $(function () {
             $('#list li.item').each(function (index, ele) {
                 if ($(ele).hasClass('active')) {
                     $('#small').hide();
+                    var src = $('.dragged').data('src');
                     $('#pic .dragged').removeClass('dragged');
                     var url = 'spec';
                     var data = {};
                     data.from = $('.current span').text();
                     data.to = $('.active span').text();
                     data.name = $('.draggable').text();
+                    data.url = src;
                     $('.draggable').remove();
                     $.ajax({
                         type: 'get',
                         url: url,
                         data: data
                     }).done(function(data) {
-                        console.log(data);
                         if (data.status === 0) {
                             $('.current').trigger('click');
                         }

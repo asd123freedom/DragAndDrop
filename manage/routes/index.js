@@ -76,27 +76,47 @@ router.get('/data', function (req, res, next) {
     var data = JSON.parse(fs.readFileSync(file, {encoding: 'utf8'}));
     res.send(data);
 });
+router.post('/order', function (req, res, next) {
+    var obj = JSON.parse(req.body.obj);
+    var arr = obj.arr;
+    var name = obj.name;
+    try {
+        fs.writeFileSync('./data/' + name + '.json', JSON.stringify(arr, null, 4));
+        res.send({
+            status: 0,
+            statusInfo: 'success'
+        });
+    }
+    catch (e) {
+        console.log(e);
+        res.send({
+            status: 1,
+            statusInfo: 'fail'
+        });
+    }
+});
 router.get('/spec', function (req, res, next) {
     var _from = req.query.from;
     var _to = req.query.to;
     var name = req.query.name;
+    var url = req.query.url;
     var fromObj = JSON.parse(fs.readFileSync('./data/' + _from + '.json', {encoding: 'utf8'}));
     var toObj = JSON.parse(fs.readFileSync('./data/' + _to + '.json', {encoding: 'utf8'}));
     var obj = {
-        name: name
+        name: name,
+        url: url
     }
     try {
-        var arr = fromObj.data;
-        console.log(arr);
+        var arr = fromObj;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i].name === name) {
                 arr.splice(i, 1);
                 break;
             }
         }
-        toObj.data.push(obj);
-        fs.writeFileSync('./data/' + _from + '.json', JSON.stringify(fromObj));
-        fs.writeFileSync('./data/' + _to + '.json', JSON.stringify(toObj));
+        toObj.push(obj);
+        fs.writeFileSync('./data/' + _from + '.json', JSON.stringify(fromObj, null, 4));
+        fs.writeFileSync('./data/' + _to + '.json', JSON.stringify(toObj, null, 4));
         res.send({
             status: 0,
             statusInfo: 'success'

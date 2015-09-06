@@ -62,6 +62,28 @@ $(function () {
                 $('.dragged').next().before($(tmp));
                 $(tmp).removeClass('droppable');
                 $('.dragged').remove();
+                var order = $('#pic div:not(.temp)');
+                var arr = [];
+                order.each(function (index, ele) {
+                    arr.push({
+                        name: $(ele).text().trim(),
+                        url: $(ele).data('src')
+                    });
+                });
+                $.ajax({
+                    type: 'post',
+                    url: '/order',
+                    data: {
+                        obj: JSON.stringify({
+                            arr: arr,
+                            name: $('#box .current span').text().trim()
+                        })
+                    }
+                }).done(function(data) {
+                    if (data.status === 0) {
+                        // $('.current').trigger('click');
+                    }
+                });
             }
         }
     })

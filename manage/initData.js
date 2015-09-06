@@ -1,12 +1,15 @@
 var fs = require('fs');
 var dir = './data';
 var obj = null;
-/*
+
 fs.readdir(dir, function(err, files) {
     if (err) {
        console.log('read dir error');
    } else {
         files.forEach(function(item) {
+            if (item === 'real.json') {
+                return;
+            }
             var tmp = dir + '/' + item;
             var name = item.replace(/\.json/, '');
             obj = fs.readFileSync(tmp, {encoding: 'utf8'});
@@ -21,7 +24,8 @@ fs.readdir(dir, function(err, files) {
         });
    }
 });
-*/
+
+/*
 var path = './public/upload';
 fs.readdir(path, function(err, files) {
     if (err) {
@@ -41,3 +45,4 @@ fs.readdir(path, function(err, files) {
         fs.writeFileSync('./data/real.json', obj);
    }
 });
+*/
