@@ -48,6 +48,12 @@
             </div>
     </div>
     <div id="small"></div>
+    <ul id="menu">
+        <li class="to-edit">编辑</li>
+        <li class="to-edit">吃饭</li>
+        <li class="to-edit">睡觉</li>
+        <li class="to-edit">写代码</li>
+    </ul>
 
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
@@ -65,6 +71,7 @@
                 $div.css({
                     'background-image': 'url(' + arr[i].url + ')'
                 });
+                $div.data('src', arr[i].url);
                 $div.appendTo($('#pic'));
             }
         }
@@ -86,8 +93,8 @@
             });
             $('#list li:eq(0)').trigger('click');
 
-            $(document).on('contextmenu',function(){
-                // return false;
+            $(document).on('contextmenu', function (e) {
+                return false;
             });
 
         });

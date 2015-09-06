@@ -164,6 +164,7 @@
             ui.closeBtn.click(function(){
                 ui.container.fadeOut(function() {
 					ui.container.remove();
+					location.href = '/pic';
 				});
             })
 

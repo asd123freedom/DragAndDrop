@@ -1,13 +1,23 @@
 $(function () {
     //click event
     var x, y, mx, my, $drag;
+    $(document).click(function(){
+        $('#menu').fadeOut();
+        // $('.content-menus .to-edit').off('click');
+    });
     $(document).on('mousedown', '#pic div', function (mouse) {
       mx = mouse.clientX;
       my = mouse.clientY;
       x = mx - $(this).offset().left;
       y = my - $(this).offset().top;
-      console.log(mouse);
-      if (3 == mouse.which) {
+      if(3 == mouse.which) {
+          var that = this;
+          $('#menu').css({'left': mx - 20, 'top': my - 20}).fadeIn();
+          // var img = $('<img/>').attr('src', $(this).data('src'));
+          $('#menu .to-edit').on('click', function(){
+              localStorage.setItem('src', $(that).data('src'));
+              location.href = "/?type=edit";
+          });
           return false;
       }
       $drag = $(this).clone();

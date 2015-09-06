@@ -6,10 +6,8 @@
     <link rel="stylesheet" href='/css/upload-widget.css' />
   </head>
   <body>
-
     <div id="main">
-    	<h1>demo</h1>
-
+        <% if (pics.length) { %>
         <div id="content" class="show">
             <a id="trigger-btn" href="javascript:void(0)">上传图片</a>
         </div>
@@ -33,15 +31,10 @@
                     <img class="gallery-pic" src="./upload/Desert.jpg" />
                 </a>
             </li> -->
-
-            <ul class="content-menus">
-                <li class="to-edit">编辑</li>
-                <li class="to-edit">编辑</li>
-            </ul>
         </ul>
-
+        <% } %>
+        <img id="edit" style="opacity: 1"/>
     </div>
-
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
     <script src="/js/upload-widget.js" type="text/javascript"></script>
     <script src="/js/filter-widget.js" type="text/javascript"></script>
@@ -52,9 +45,18 @@
         $('#trigger-btn').upload({
             uploadUrl: '/upload'
         });
-
+        var src = localStorage.getItem('src');
+        console.log(src);
+        var img = $('#edit').attr('src', src);
+        img.css('opacity', 1);
+        img.appendTo($('body'));
+        $('body').picEdit({
+            pic: $(img)
+        });
+        /*
         $('.gallery-pic').mousedown(function(e){
             var that = this;
+            console.log(that);
             var left = this.offsetLeft + 100+ 'px',
                 top = this.offsetTop + 100 + 'px';
             if(3 == e.which) {
@@ -67,13 +69,15 @@
             }
             return false;
         })
+        */
+        /*
         $(document).on('contextmenu',function(){
-            return false;
+            // return false;
         });
         $(document).click(function(){
             $('.content-menus').fadeOut();
             $('.content-menus .to-edit').off('click');
-        });
+        });*/
 
     </script>
   </body>

@@ -6,6 +6,16 @@ $(function () {
       my = mouse.clientY;
       x = mx - $(this).offset().left;
       y = my - $(this).offset().top;
+      if(3 == e.which) {
+          $('#menu').css({'left': mx - 20, 'top': my - 20}).fadeIn();
+          /*
+          $('#menu .to-edit').on('click', function(){
+              $('body').picEdit({
+                  pic: $(that)
+              });
+          });
+          */
+      }
       $drag = $(this).clone();
       $drag.addClass('draggable');
       $drag.appendTo($('#pic'));
@@ -14,6 +24,9 @@ $(function () {
           'top' : my - y,
           'left': mx - x
       });
+    });
+    $(document).on('contextmenu', '#pic', function(){
+        return false;
     });
     $(document).on('mousemove', '#pic', function (mouse) {
         mx = mouse.clientX;

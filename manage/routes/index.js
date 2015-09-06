@@ -7,20 +7,30 @@ var html = fs.readFileSync('./public/pic.html', {encoding: 'utf8'});
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var path = __dirname.slice(0, -7)+'/public/upload';
-    fs.readdir(path, function(err, files) {
-        if (err) {
-           console.log('read dir error');
-       } else {
-            var pics = [];
-            files.forEach(function(item) {
-                pics.push('upload/'+item);
-            });
-            res.render('index', {
-                title: 'Express' ,
-                pics: pics
-            });
-       }
-    });
+    var type = req.query.type;
+    console.log(type);
+    if (type === 'edit') {
+        res.render('index', {
+            title: '编辑图片' ,
+            pics: []
+        });
+    }
+    else {
+        fs.readdir(path, function(err, files) {
+            if (err) {
+               console.log('read dir error');
+           } else {
+                var pics = [];
+                files.forEach(function(item) {
+                    pics.push('upload/'+item);
+                });
+                res.render('index', {
+                    title: 'Express' ,
+                    pics: pics
+                });
+           }
+        });
+    }
 });
 
 router.post('/upload', function(req, res) {
@@ -44,11 +54,13 @@ router.post('/upload', function(req, res) {
 });
 
 router.get('/pic', function (req, res, next) {
+    res.set('Cache-Control', 'no-cache');
     res.send(html);
 });
 
 router.get('/show', function (req, res, next) {
     html = fs.readFileSync('./public/demo.html', {encoding: 'utf8'});
+    res.set('Cache-Control', 'no-cache');
     res.send(html);
 });
 

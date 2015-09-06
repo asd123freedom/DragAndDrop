@@ -238,22 +238,3 @@ a {
     font-size: 10px;
     cursor: pointer;
 }
-
-.content-menus {
-    position: absolute;
-    display: none;
-    width: 50px;
-    height: 100px;
-    background-color: #2B4064;
-    z-index: 999;
-}
-.content-menus .to-edit {
-    list-style-type: none;
-    color: #fff;
-    height: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-.content-menus .to-edit:hover {
-    background-color: #2C4A75
-}
